@@ -8,9 +8,9 @@
                     FUNCTION:
    -----====================================---------------------------------------------------------------------------------------
 
-   --------------------------------------------------------------------------------------------------------------------------------		
+   --------------------------------------------------------------------------------------------------------------------------------     
        HARD ASSERTS: Terminates programs execution hen condition fails 
-   --------------------------------------------------------------------------------------------------------------------------------		
+   --------------------------------------------------------------------------------------------------------------------------------     
         _ASSERT(_condition, _msg)
         _ASSERT_True(_condition, _msg)
         _ASSERT_False(_condition, _msg)
@@ -18,9 +18,9 @@
         _ASSERT_NotNull(_object, _msg)
         
         
-   --------------------------------------------------------------------------------------------------------------------------------		
-       SOFT ASSERTS: Test for condition returning results without termination. 	
-   --------------------------------------------------------------------------------------------------------------------------------		
+   --------------------------------------------------------------------------------------------------------------------------------     
+       SOFT ASSERTS: Test for condition returning results without termination.  
+   --------------------------------------------------------------------------------------------------------------------------------     
         _SOFT_ASSERT(_condition, _msg)
         _SOFT_ASSERT_True(_condition, _msg)
         _SOFT_ASSERT_False(_condition, _msg)
@@ -44,11 +44,11 @@
 
     ///===============================================================================================================
     ///                                                                                                                                     
-	///         QUICK REFERENCE FOR ASSERT FUNCTIONS                                                                                                                                                                                                                                                                    
-	///                                                                                                                                                                                                                                                                            
+    ///         QUICK REFERENCE FOR ASSERT FUNCTIONS                                                                                                                                                                                                                                                                    
+    ///                                                                                                                                                                                                                                                                            
     ///---------------------------------------------------------------------------------------------------------------*/
     #region DOCUMENTATION
-	
+    
     #endregion
 
     ///===============================================================================================================
@@ -67,8 +67,8 @@
     ///                                                                                                                                                                                                                                                                            
     ///---------------------------------------------------------------------------------------------------------------*/
     #region HARD_ASSERTS
-	
-	
+    
+    
         ///===============================================================================================================
         ///@function _ASSERT(_condition, _msg)
         ///@description DEBUG build false condition test removed by optimization during releaase.
@@ -89,7 +89,7 @@
                      "Position: " + string(__POS__)          + "/n" +
                      "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
                  );
-				 show_error("Assertion Fail! Terminating Application!", true);
+                 show_error("Assertion Fail! Terminating Application!", true);
              }
          }
         ///_______________________________________________________________________________________________________________
@@ -100,11 +100,11 @@
         ///@description DEBUG build breaks to ensure _condition is TRUE
         ///@param _condition to test for equality
         ///@param _msg Message to display on fail
-        ///---------------------------------------------------------------------------------------------------------------	
+        ///---------------------------------------------------------------------------------------------------------------  
         function _ASSERT_True(_condition, _msg)
-	    {
-			_ASSERT((_condition) == true, _msg);
-		}
+        {
+            _ASSERT((_condition) == true, _msg);
+        }
         ///_______________________________________________________________________________________________________________
         
         
@@ -115,12 +115,12 @@
         ///@param _msg Message to display on fail
         ///---------------------------------------------------------------------------------------------------------------
         function _ASSERT_False(_condition, _msg)
-	    {
-		    _ASSERT((_condition) == false, _msg);
+        {
+            _ASSERT((_condition) == false, _msg);
         }
-		///_______________________________________________________________________________________________________________
+        ///_______________________________________________________________________________________________________________
         
-		 
+         
         ///===============================================================================================================
         ///@function _ASSERT_Null(_object, _msg)
         ///@description DEBUG build breaks to ensure object is null
@@ -128,10 +128,10 @@
         ///@param _msg Message to display on fail
         ///---------------------------------------------------------------------------------------------------------------
         function _ASSERT_Null(_object, _msg)
-	    {
-			_ASSERT( is_undefined(_object) == true, _msg);
-		}  
-		///_______________________________________________________________________________________________________________
+        {
+            _ASSERT( is_undefined(_object) == true, _msg);
+        }  
+        ///_______________________________________________________________________________________________________________
         
         
         ///===============================================================================================================
@@ -141,9 +141,9 @@
         ///@param _msg Message to display on fail
         ///---------------------------------------------------------------------------------------------------------------
         function _ASSERT_NotNull(_object, _msg)
-	    {
-		    _ASSERT( is_undefined(_object) != true, _msg);
-		}	 
+        {
+            _ASSERT( is_undefined(_object) != true, _msg);
+        }    
         ///_______________________________________________________________________________________________________________
 
 
@@ -155,9 +155,9 @@
     ///     SATISFY ASSERT CONDITIONS BUT SIMPLY DISPLAYS POP UP INSTEAD OF TERMINATING PROGRAM                                                                                                  
     ///                                                                                                                                                                                                                                                                            
     ///---------------------------------------------------------------------------------------------------------------*/
-    #region SOFT_ASSERTS	
-	    
-	    
+    #region SOFT_ASSERTS    
+        
+        
         ///===============================================================================================================
         ///@function _SOFT_ASSERT(_condition, _msg)
         ///@description DEBUG build test removed during optimization during releaase.
@@ -165,8 +165,8 @@
         ///@param _msg Message to display on fail
         ///---------------------------------------------------------------------------------------------------------------
         function _SOFT_ASSERT(_condition, _msg)
-	    {
-			 if(_DEBUG & (!(_condition)) )
+        {
+             if(_DEBUG & (!(_condition)) )
              {// TEST WE ARE IN DEBUG MODE THEN CHECKS CONDITION IS NOT FALSE
                  show_debug_message
                  (
@@ -178,12 +178,12 @@
                      "Position: " + string(__POS__)          + "/n" +
                      "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
                  );
-				 show_message("Assertion Fail!");
+                 show_message("Assertion Fail!");
              }
-	    }
+        }
         ///_______________________________________________________________________________________________________________
-	    
-	    
+        
+        
         ///===============================================================================================================
         ///@function _SOFT_ASSERT_True(_condition, _msg)
         ///@description DEBUG build test removed during optimization during releaase.
@@ -191,12 +191,12 @@
         ///@param _msg Message to display on fail
         ///---------------------------------------------------------------------------------------------------------------
         function _SOFT_ASSERT_True(_condition, _msg)
-	    {
+        {
             _SOFT_ASSERT((_condition) == true, _msg);
-	    }
+        }
         ///_______________________________________________________________________________________________________________
-	    
-	    
+        
+        
         ///===============================================================================================================
         ///@function _SOFT_ASSERT_False(_condition, _msg)
         ///@description DEBUG build test removed during optimization during releaase.
@@ -204,12 +204,12 @@
         ///@param _msg Message to display on fail
         ///---------------------------------------------------------------------------------------------------------------
         function _SOFT_ASSERT_False(_condition, _msg)
-	    {
-	        _SOFT_ASSERT((_condition) == false, _msg);
-	    }
+        {
+            _SOFT_ASSERT((_condition) == false, _msg);
+        }
         ///_______________________________________________________________________________________________________________
         
-	    
+        
         ///===============================================================================================================
         ///@function _SOFT_ASSERT_Null(_object, _msg)
         ///@description DEBUG build test returns true if object is NULL
@@ -218,9 +218,9 @@
         ///---------------------------------------------------------------------------------------------------------------
         ///_______________________________________________________________________________________________________________
         function _SOFT_ASSERT_Null(_object, _msg)
-	    {
-		    _SOFT_ASSERT( is_undefined(_object) == true, _msg);
-	    }
+        {
+            _SOFT_ASSERT( is_undefined(_object) == true, _msg);
+        }
         
         ///===============================================================================================================
         ///@function _SOFT_ASSERT_NotNull(_object, _msg)
@@ -230,9 +230,9 @@
         ///---------------------------------------------------------------------------------------------------------------
         ///_______________________________________________________________________________________________________________
         function _SOFT_ASSERT_NotNull(_object, _msg)
-	    {
-	        _SOFT_ASSERT( is_undefined(_object) != true, _msg);
-	    }
+        {
+            _SOFT_ASSERT( is_undefined(_object) != true, _msg);
+        }
 
     #endregion
     
@@ -253,10 +253,10 @@
 
     ///===============================================================================================================
     ///                                                                                                                                     
-	///         QUICK REFERENCE FOR DEBUG FUNCTIONS                                                                                                                                                                                                                                                                    
-	///                                                                                                                                                                                                                                                                            
+    ///         QUICK REFERENCE FOR DEBUG FUNCTIONS                                                                                                                                                                                                                                                                    
+    ///                                                                                                                                                                                                                                                                            
     ///---------------------------------------------------------------------------------------------------------------*/
-	#region DOCUMENTATION
+    #region DOCUMENTATION
 
 /*/_______________________________________________________________________________________________________________
 ==================================================================================================================
@@ -291,15 +291,15 @@
    
 __________________________________________________________________________________________________________________
 ==================================================================================================================*/
-	
-	#endregion
+    
+    #endregion
 
 
     ///===============================================================================================================
     ///                                                                                                                                     
     ///            GLOBAL DATA AND MACROS FOR THIS REGION
     ///                                                                                                                                     
-	///---------------------------------------------------------------------------------------------------------------*/    
+    ///---------------------------------------------------------------------------------------------------------------*/    
     #region GLOBAL_DATA
         
         #macro __FILE__   debug_get_callstack_file(debug_get_callstack(), 0)
@@ -314,104 +314,104 @@ ________________________________________________________________________________
     ///@description Returns Line position of callstack
     ///@param callstack_array
     ///@param index
-	///@param _depth{*Optional*} The callstack depth to return.  
+    ///@param _depth{*Optional*} The callstack depth to return.  
     ///---------------------------------------------------------------------------------------------------------------
     function debug_get_callstack_pos( _callstack_array, _index, _depth)
     {
-		
+        
         if( is_undefined(_depth) )
-		{
+        {
             gml_pragma("global", "global.g_debug_get_callstack_pos = ds_map_create();");
-			
-			var ind = min(_index, array_length(_callstack_array) - 1);			
+            
+            var ind = min(_index, array_length(_callstack_array) - 1);          
             var _item = _callstack_array[ind];
             var _pos = global.g_debug_get_callstack_pos[?_item];
-			
+            
             if( is_undefined(_pos) )
-			{
+            {
                 _pos = _item;
                 if( string_copy(_pos, 1, 4) == "gml_")
-				{
+                {
                     switch( string_ord_at(_pos, 5))
-				    {
+                    {
                         case ord("S"): // gml_Script_ --> \/
-				        case ord("O"): // gml_Object_
-				        {
+                        case ord("O"): // gml_Object_
+                        {
                             _pos = string_delete(_pos, 1, 11);
-				        }
+                        }
                         break;
                     }
                     global.g_debug_get_callstack_pos[?_item] = _pos;
-				}
+                }
             }
             return _pos;
-		}
-		else
-		{// WE SPECIFIED A DEPTH AND WISH TO RETURN ARRAY OF POSITIONS
-			var result;
-			result[0] = 0; 
-			for(var i = 0; i < _depth; ++i)
-			{
-			    result[i] = debug_get_callstack_pos( _callstack_array, i);
-			}
-			return result;			
-		}
+        }
+        else
+        {// WE SPECIFIED A DEPTH AND WISH TO RETURN ARRAY OF POSITIONS
+            var result;
+            result[0] = 0; 
+            for(var i = 0; i < _depth; ++i)
+            {
+                result[i] = debug_get_callstack_pos( _callstack_array, i);
+            }
+            return result;          
+        }
     }
     ///_______________________________________________________________________________________________________________
-	
+    
     
     ///===============================================================================================================
     ///@function debug_get_callstack_file( _callstack_array, _index)
     ///@description Returns the File of the callstack
     ///@param _callstack_array
     ///@param _index
-	///@param _depth{*Optional*} The callstack depth to return.  
+    ///@param _depth{*Optional*} The callstack depth to return.  
     ///---------------------------------------------------------------------------------------------------------------
     function debug_get_callstack_file( _callstack_array, _index, _depth)
     {
         if( is_undefined(_depth) )
-		{
+        {
             gml_pragma("global", "global.g_debug_get_callstack_file = ds_map_create();");
-			
-			var ind = min(_index, array_length(_callstack_array) - 1);			
+            
+            var ind = min(_index, array_length(_callstack_array) - 1);          
             var _item = _callstack_array[ind];
             var _file = global.g_debug_get_callstack_file[?_item];
-			
+            
             if (is_undefined(_file)) 
-			{
+            {
                 _file = _item;
                 var _pos = string_pos(":", _file);
                 if (_pos)
-				{
-					_file = string_copy(_file, 1, _pos - 1);
-				}
+                {
+                    _file = string_copy(_file, 1, _pos - 1);
+                }
                 
                 if (string_copy(_file, 1, 4) == "gml_")
-				{
+                {
                     switch (string_ord_at(_file, 5))
-				    {
+                    {
                         case ord("S"): // gml_Script_--> \/
                         case ord("O"): // gml_Object_
-						{
+                        {
                             _file = string_delete(_file, 1, 11);
-					    }
+                        }
                         break;
                     }
-				}
+                }
                 global.g_debug_get_callstack_file[?_item] = _file;
             }
             return _file;
-		}
-		else
-		{// WE WANT MULTIPLE FILES FROM THE CALLSTACK
-			var result;
-			result[0] = 0; 
-			for(var i = 0; i < _depth; ++i)
-			{
-			    result[i] = debug_get_callstack_file( _callstack_array, i);
-			}
-			return result;			
-		}
+        }
+        else
+        {// WE WANT MULTIPLE FILES FROM THE CALLSTACK
+            var result;
+            result[0] = 0; 
+            for(var i = 0; i < _depth; ++i)
+            {
+                result[i] = debug_get_callstack_file( _callstack_array, i);
+            }
+            return result;          
+        }
     }// Akin to above, but we also trim :line from the end if there's one.
     ///_______________________________________________________________________________________________________________
         
@@ -421,7 +421,7 @@ ________________________________________________________________________________
     ///@description
     ///@param callstack_array
     ///@param index
-	///@param _depth{*Optional*} The callstack depth to return.  
+    ///@param _depth{*Optional*} The callstack depth to return.  
     ///---------------------------------------------------------------------------------------------------------------
     function debug_get_callstack_line( _callstack_array, _index, _depth)
     {
@@ -429,8 +429,8 @@ ________________________________________________________________________________
         if( is_undefined(_depth) )
         {
             gml_pragma("global", "global.g_debug_get_callstack_line = ds_map_create();");
-			
-			var ind = min(_index, array_length(_callstack_array) - 1);			
+            
+            var ind = min(_index, array_length(_callstack_array) - 1);          
             var _item = _callstack_array[ind];
             var _line = global.g_debug_get_callstack_line[?_item];
             if ( is_undefined(_line) ) 
@@ -448,16 +448,16 @@ ________________________________________________________________________________
             }
             return _line;
         }
-		else
-		{// REQUESTED MULTIPLE LINE NUMBERS FROM THE CALLSTACK
-			var result;
-			result[0] = 0; 
-			for(var i = 0; i < _depth; ++i)
-			{
-			    result[i] = debug_get_callstack_line( _callstack_array, i);
-			}
-			return result;
-		}
+        else
+        {// REQUESTED MULTIPLE LINE NUMBERS FROM THE CALLSTACK
+            var result;
+            result[0] = 0; 
+            for(var i = 0; i < _depth; ++i)
+            {
+                result[i] = debug_get_callstack_line( _callstack_array, i);
+            }
+            return result;
+        }
     }
     ///_______________________________________________________________________________________________________________
     
@@ -480,11 +480,11 @@ ________________________________________________________________________________
         var w = ds_grid_width(g);
         var h = ds_grid_height(g);
         if (i >= 0 && k >= 0 && i < w && k < h)
-		{// WE ARE INBOUNDS RETURN GRID ELEMENT
+        {// WE ARE INBOUNDS RETURN GRID ELEMENT
             return ds_grid_get(g, i, k);
         } 
-		else
-		{// DISPAY DEBUG MESSAGE WARNING OF OVERFLOW
+        else
+        {// DISPAY DEBUG MESSAGE WARNING OF OVERFLOW
             show_debug_message("ds_grid_get_debug["
                 + debug_get_callstack_pos(debug_get_callstack(), 1)
                 + "] attempting to read outside the grid, x="
@@ -498,7 +498,7 @@ ________________________________________________________________________________
 #endregion
 ///_______________________________________________________________________________________________________________
 
-	 
+     
 
 ///===============================================================================================================
 ///                                                                                                                                     
@@ -508,105 +508,105 @@ ________________________________________________________________________________
 ///---------------------------------------------------------------------------------------------------------------*/
 #region MODULE_TEST
     
-	
-	function TEST_ALL_DEBUG_MODULE()
-	{
-		
-		TEST_ASSERT()							  
-		TEST_ASSERT_True()						  
-		TEST_ASSERT_False()					  
-		TEST_ASSERT_Null()						  
-		TEST_ASSERT_NotNull()					
-		TEST_SOFT_ASSERT()				   
-		TEST_SOFT_ASSERT_True()			   
-		TEST_SOFT_ASSERT_False()			   
-		TEST_SOFT_ASSERT_Null()				  
-		TEST_SOFT_ASSERT_NotNull()				
-		TEST_debug_get_callstack_pos()  
-		TEST_debug_get_callstack_file()	
-		TEST_debug_get_callstack_line()	
-		TEST_ds_grid_get_debug( _grid, _x, _y)		
-	}
-	
-	function TEST_ASSERT()							   
+    
+    function TEST_ALL_DEBUG_MODULE()
     {
-		return _ASSERT( true, "_ASSERT with true FAILED");
-	} 	
-    function TEST_ASSERT_True()						   
+        
+        TEST_ASSERT()                             
+        TEST_ASSERT_True()                        
+        TEST_ASSERT_False()                   
+        TEST_ASSERT_Null()                        
+        TEST_ASSERT_NotNull()                   
+        TEST_SOFT_ASSERT()                 
+        TEST_SOFT_ASSERT_True()            
+        TEST_SOFT_ASSERT_False()               
+        TEST_SOFT_ASSERT_Null()               
+        TEST_SOFT_ASSERT_NotNull()              
+        TEST_debug_get_callstack_pos()  
+        TEST_debug_get_callstack_file() 
+        TEST_debug_get_callstack_line() 
+        TEST_ds_grid_get_debug( _grid, _x, _y)      
+    }
+    
+    function TEST_ASSERT()                             
     {
-		var TestVal = 100;
-		return _ASSERT_True( (TestVal == 100)  == true, "TRUE ASSERT_True FAILED");
-    } 	
-    function TEST_ASSERT_False()					   
+        return _ASSERT( true, "_ASSERT with true FAILED");
+    }   
+    function TEST_ASSERT_True()                        
     {
-		var TestVal = 100	;
-	    return _ASSERT_False( (TestVal != 100) == true, "TRUE TEST_ASSERT_False FAILED");
-    } 	
-	
-    function TEST_ASSERT_Null()						   
+        var TestVal = 100;
+        return _ASSERT_True( (TestVal == 100)  == true, "TRUE ASSERT_True FAILED");
+    }   
+    function TEST_ASSERT_False()                       
     {
-		var obj = undefined;
-		return _ASSERT_Null( obj, "TEST Assert: Null") == true;							
-	} 	
-    function TEST_ASSERT_NotNull()						   
-    {
-		var obj = undefined;
-		return _ASSERT_NotNull( obj, "TEST Assert: Not Null") == true;						
-	}
-	
-	
-
-    function TEST_SOFT_ASSERT()				   
-    {
-		return _SOFT_ASSERT( true, "TEST Assert: Soft Assert") == true;							
-	}
-    function TEST_SOFT_ASSERT_True()			   
-    {
-		var TestVal = 100;
-		return _SOFT_ASSERT_True( TestVal == 100, "TEST Assert: Soft True") == true;		
-	}
-    function TEST_SOFT_ASSERT_False()			   
-    {
-		var TestVal = 100;
-		return _SOFT_ASSERT_False( TestVal != 100, "TEST Assert: Soft False") == true;		
-	} 
-	
-    function TEST_SOFT_ASSERT_Null()				
-	
+        var TestVal = 100   ;
+        return _ASSERT_False( (TestVal != 100) == true, "TRUE TEST_ASSERT_False FAILED");
+    }   
+    
+    function TEST_ASSERT_Null()                        
     {
         var obj = undefined;
-		return _SOFT_ASSERT_Null(obj, "TEST Assert: Soft Null") == true;				
-	} 
-    function TEST_SOFT_ASSERT_NotNull()			
+        return _ASSERT_Null( obj, "TEST Assert: Null") == true;                         
+    }   
+    function TEST_ASSERT_NotNull()                         
     {
-		var obj = undefined;
-		return _SOFT_ASSERT_NotNull(obj, "TEST Assert: Soft Not Null") == true;			
-	}
+        var obj = undefined;
+        return _ASSERT_NotNull( obj, "TEST Assert: Not Null") == true;                      
+    }
+    
+    
+
+    function TEST_SOFT_ASSERT()                
+    {
+        return _SOFT_ASSERT( true, "TEST Assert: Soft Assert") == true;                         
+    }
+    function TEST_SOFT_ASSERT_True()               
+    {
+        var TestVal = 100;
+        return _SOFT_ASSERT_True( TestVal == 100, "TEST Assert: Soft True") == true;        
+    }
+    function TEST_SOFT_ASSERT_False()              
+    {
+        var TestVal = 100;
+        return _SOFT_ASSERT_False( TestVal != 100, "TEST Assert: Soft False") == true;      
+    } 
+    
+    function TEST_SOFT_ASSERT_Null()                
+    
+    {
+        var obj = undefined;
+        return _SOFT_ASSERT_Null(obj, "TEST Assert: Soft Null") == true;                
+    } 
+    function TEST_SOFT_ASSERT_NotNull()         
+    {
+        var obj = undefined;
+        return _SOFT_ASSERT_NotNull(obj, "TEST Assert: Soft Not Null") == true;         
+    }
     function TEST_debug_get_callstack_pos()  
-	{		
-		var callstack = debug_get_callstack();
-		var pos0 = debug_get_callstack_pos(callstack, 0); 
-		var pos1 = debug_get_callstack_pos(callstack, 1); 
-		var pos_array = debug_get_callstack_pos(callstack, 0, 2); 
-	}
-    function TEST_debug_get_callstack_file()	
-	{
-		var callstack = debug_get_callstack();
-		var file0 = debug_get_callstack_file(callstack, 0)	
-		var file1 = debug_get_callstack_file(callstack, 1)	
-		var file_array =debug_get_callstack_file(callstack, 0, 2); 
-	}
-    function TEST_debug_get_callstack_line()	
-	{
-		var callstack = debug_get_callstack();
-		var line0 = debug_get_callstack_line(callstack, 0)		
-		var line1 = debug_get_callstack_line(callstack, 1)		
-		var line_array = debug_get_callstack_line(callstack, 0, 2); 		
- 	}	
+    {       
+        var callstack = debug_get_callstack();
+        var pos0 = debug_get_callstack_pos(callstack, 0); 
+        var pos1 = debug_get_callstack_pos(callstack, 1); 
+        var pos_array = debug_get_callstack_pos(callstack, 0, 2); 
+    }
+    function TEST_debug_get_callstack_file()    
+    {
+        var callstack = debug_get_callstack();
+        var file0 = debug_get_callstack_file(callstack, 0)  
+        var file1 = debug_get_callstack_file(callstack, 1)  
+        var file_array =debug_get_callstack_file(callstack, 0, 2); 
+    }
+    function TEST_debug_get_callstack_line()    
+    {
+        var callstack = debug_get_callstack();
+        var line0 = debug_get_callstack_line(callstack, 0)      
+        var line1 = debug_get_callstack_line(callstack, 1)      
+        var line_array = debug_get_callstack_line(callstack, 0, 2);         
+    }   
     function TEST_ds_grid_get_debug( _grid, _x, _y)
     {
-	    //ds_grid_get_debug( _grid, _x, _y)
-	}
+        //ds_grid_get_debug( _grid, _x, _y)
+    }
                    
     
     
