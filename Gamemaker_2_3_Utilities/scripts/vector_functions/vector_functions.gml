@@ -79,7 +79,83 @@
 /* ===========================================================*/
 
 
+#region VEC2_DOCUMENTATION
 
+
+///==================================================================================================
+///
+///                      2D VECTOR STRUCTURE
+///--------------------------------------------------------------------------------------------------
+///
+///    Vec2(_x, _y) constructor
+///         add(_other)
+///         subtract(_other)
+///         multiple(_other)
+///         divide(_other)
+///         dot(_other)	
+///         set(_x, _y)	
+///         negate()
+///         normalize(_other)
+///         rotate(_origin, _angle)
+///         length()
+///         distance(_other)
+///         normal_vec(_other)	
+///         angle(_other)	
+///         deg_angle(_other)	
+///         copy()
+///         copy_vec(_other)	
+///         inline_add(_other)
+///         inline_sub(_other)
+///         inline_mult(_other)
+///         inline_div(_other)
+///         negate()
+///         inline_normalize()
+///         inline_normal(_other)	
+///         inline_rotate(_origin, _angle)
+///         add2D(_x, _y)
+///         subtract2D(_x, _y)
+///         
+///         multiple2D(_x, _y)
+///         divide2D(_x, _y)
+///         dot2D(_x, _y)
+///         normalize2D(_x, _y)
+///         distance2D(_x, _y)
+///         angle2D(_x, _y)
+///         point_angle(_x, _y)	
+///         normal2D(_x, _y)
+///         inline_add2D(_x, _y)
+///         inline_sub2D(_x, _y)
+///         inline_mult2D(_x, _y)
+///         inline_mult2D(_x, _y)
+///         inline_div2D(_x, _y)
+///         draw_line_width_to_vec(_other, _width)
+///         inline_normalize2D(_x, _y)
+///         draw_line_to_vec(_other)
+///         draw_line_vec_general(_other, _width, _color)
+///         draw_line_angle(_dAngle, _length, _width, _color)
+///         draw_line_to_point(_x, _y)
+///         draw_line_width_to_point(_x, _y, _width)
+///         draw_line_point_general(_x, _y, _width, _color)
+///         draw_circle(_radius, _outline)
+///         draw_circle_color(_radius, _color, _outline)
+///         draw_vec2(_size)
+///         draw_vec2_color(_size, _color)
+///         draw_line_vec2D(_v1, _v2)
+///         draw_line_width_vec2D(_v1, _v2, _width)
+///         draw_line_general_vec2D(_v1, _v2, _color, _width)
+///         draw_circle_vec(_v1, _radius, _outline)
+///         draw_circle_color_vec(_v1, _radius, _color, _outline)
+///         draw_triangle_vec(_v1, _v2, _v3)
+///         draw_polygon_vec(_point_array)
+///         draw_polygon_general_vec(_origin, _point_array, _color, _width)
+///
+///
+///
+///__________________________________________________________________________________________________
+///==================================================================================================
+    
+
+#endregion
 ///=============================================================
 ///@function Vec2(_x, _y) constructor
 ///@description Creates a 2D Point in Space
@@ -844,8 +920,6 @@ function Vec2(_x, _y) constructor
 }// Vec2 Constructor
 ///_____________________< VECTOR 2D C_TOR >_____________________
 ///=============================================================
- 
-
 
 
 

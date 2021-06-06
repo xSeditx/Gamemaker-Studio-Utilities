@@ -45,11 +45,11 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rm_test_rotate_fixed","path":"rooms/rm_test_rotate_fixed/rm_test_rotate_fixed.yy",},},
     {"roomId":{"name":"rm_test_color","path":"rooms/rm_test_color/rm_test_color.yy",},},
     {"roomId":{"name":"rm_drawAngle","path":"rooms/rm_drawAngle/rm_drawAngle.yy",},},
     {"roomId":{"name":"rm_test_rotate","path":"rooms/rm_test_rotate/rm_test_rotate.yy",},},
     {"roomId":{"name":"rm_test_mat3","path":"rooms/rm_test_mat3/rm_test_mat3.yy",},},
-    {"roomId":{"name":"rm_test_rotate_fixed","path":"rooms/rm_test_rotate_fixed/rm_test_rotate_fixed.yy",},},
     {"roomId":{"name":"rm_test_polygon","path":"rooms/rm_test_polygon/rm_test_polygon.yy",},},
   ],
   "Folders": [
