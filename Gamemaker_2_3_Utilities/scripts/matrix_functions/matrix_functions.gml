@@ -7,12 +7,22 @@
 /// [  0,   0,   1 ]  [ 1 ]
 
 
+/* =============================================================================
+                                                                                          
+                                                                                          
+                       ! WARNING ! ~ INCOMPLETE                                                                        
+                                                                                          
+                                                                                          
+   -----------------------------------------------------------------------------*/
 
 function Matrix(_row, _column) constructor
 {
 	row_size = _row;
 	column_size = _column;
 	value[_row, _column] = 0;
+	
+	
+	
     ///=============================================================================	
 	///@function identity()
 	///@description Sets and Returns Identity Matrix
@@ -21,10 +31,11 @@ function Matrix(_row, _column) constructor
 	{
 		for(var i = 0; i < min(row_size, column_size); ++i)
 		{
-			value[i ,  i] = 1;			
+			value[i ,  i] = 1.0;			
 		}
 		return self;
 	}
+	
     ///=============================================================================
 	///@function set(_array)
 	///@description Sets the Value of this Matrix using Array
@@ -33,19 +44,22 @@ function Matrix(_row, _column) constructor
 	function set(_array)
 	{
 		value = _array;
-		return;//null
+		return; //null
 	}
 
     ///=============================================================================
-	///@function 
+	///@function set_row(_row, _vals)
 	///@description  
-	///@param 
+	///@param _row   Which row will we assign this array to
+	///@param _vals  Array of values to apply to specific row
 	///-----------------------------------------------------------------------------
     function set_row(_row, _vals)
-	{}
+	{
+		 _ASSERT(_row < row_size)
+	}
 	
     ///=============================================================================
-	///@function 
+	///@function set_column(_col, _vals)
 	///@description  
 	///@param 
 	///-----------------------------------------------------------------------------

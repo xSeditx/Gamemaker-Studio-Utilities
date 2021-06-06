@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "get_distance",
+  "name": "debug_utility_functions",
   "tags": [],
   "resourceType": "GMScript",
 }
